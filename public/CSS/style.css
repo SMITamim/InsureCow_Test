@@ -1,0 +1,65 @@
+footer {
+    background-color: #111010;
+    /* Light gray background color */
+    padding: 20px;
+    text-align: center;
+    position: fixed; /*You have to uncomment this function for a bottom fixed footer*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    flex-direction: row;
+    display: block;
+    margin-top: 10px;
+}
+
+.GuardianBread{
+    margin-right: 20%;
+}
+.GuardianEducation{
+    margin-left: 3%;
+    /* margin-top: 5%; */
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 9%;
+    margin-bottom: 2%;
+    /* align-items: center; */
+    /* margin-bottom: 5%; */
+}
+
+.TitleBar{
+    margin-top: 50%;
+}
+
+.BtnLanding{
+    margin-top: 0%;
+}
+.Taplogo{
+    height: 150px;
+}
+
+footer>p {
+    font-size: 14px;
+    /* Set font size */
+    color: #ffffff;
+    /* Set text color */
+    margin: 0;
+    /* Remove default margin */
+}
+/* style.css */
+
+.navbar {
+    background: linear-gradient(to right, #FFA500, #FF6347); /* Orange gradient from left to right */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #fff; /* White text color */
+    font-weight: bold; /* Bold font */
+}
+.breadcrumb{
+    margin-top: 2%;
+    background: linear-gradient(to right, #FFA500, #FF6347);
+}
+.addForm{
+    margin-top: 2%;
+    background: linear-gradient(to right, #FFA500, #FF6347);
+}
