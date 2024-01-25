@@ -32,8 +32,12 @@ class LoginController extends Controller
         if ($user && $user->password == $credentials['password']) {
             // Authentication passed
             Auth::login($user);
-
-            return redirect()->intended('/product');
+            if ($user->role == 'admin') {
+                return redirect()->route('product');
+            } elseif ($user->role == 'user'){
+                return redirect()->route('userDashboard');
+            }
+            
         }
 
         // Authentication failed

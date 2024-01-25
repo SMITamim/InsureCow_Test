@@ -19,6 +19,12 @@
                                 <a class="nav-link" href="{{ route('login') }}">Login/Sign In</a>
                             </li>
                         @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="bi bi-cart"></i> Cart
+                                </a>
+                            </li>
+                            
                             <!-- Display logout link and user role if the user is authenticated -->
                             <li class="nav-item">
                                 <span class="nav-link">Logged in as {{ Auth::user()->role }}</span>
@@ -29,6 +35,7 @@
                                     @csrf
                                 </form>
                             </li>
+                            
                         @endguest
                     </ul>
                 </div>

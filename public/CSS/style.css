@@ -3,7 +3,7 @@ footer {
     /* Light gray background color */
     padding: 20px;
     text-align: center;
-    position: fixed; /*You have to uncomment this function for a bottom fixed footer*/
+    /*position: fixed; /*You have to uncomment this function for a bottom fixed footer*/
     left: 0;
     bottom: 0;
     width: 100%;

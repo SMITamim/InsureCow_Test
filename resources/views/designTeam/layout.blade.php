@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.css"/>
+    
     <script src="https://kit.fontawesome.com/d4fd55d14f.js" crossorigin="anonymous"></script>
     <link href="{{ asset('CSS/style.css') }}" rel="stylesheet" />
 

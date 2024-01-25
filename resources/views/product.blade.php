@@ -1,5 +1,6 @@
 @extends('designTeam.layout')
 @section('content')
+
     <div class="container-fluid">
         <div class="row mt-5">
             <div class="col-md-12">
@@ -81,6 +82,20 @@
                 </div>
 
             </div>
+            
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <!-- Add export button -->
+                        <a href="{{ route('export-products') }}" class="btn btn-primary mb-3">
+                            <i class="bi bi-file-earmark-excel"></i>
+                        </a>
+            
+                        <div class="card addForm">
+                            <!-- ... (your existing code) ... -->
+                        </div>
+                    </div>
+                </div>
+            
         <div class="row mt-2">
             @if($products->count()>0)
             <table class="table table-dark" id="myTable">

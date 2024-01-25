@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 use App\Models\Products;
 use App\Models\Category;
+use App\Exports\ProductsExport;
+use App\Jobs\SendNewProductEmail;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class ProductController extends Controller
 {
@@ -11,6 +15,7 @@ class ProductController extends Controller
     {
         $this->middleware('checkAdmin');
     }
+    
     public function Product()
     {
         $products = Products::all();
@@ -43,6 +48,8 @@ class ProductController extends Controller
         $product->quantity = $request->quantity;
         
         $product->save();
+        
+        /* dispatch(new SendNewProductEmail($product));   /* comment out this line and configure .env file to send mail*/
         return redirect()->back()->with('success','New Product Added');
     }
     public function getProduct(Request $request)
@@ -87,6 +94,11 @@ class ProductController extends Controller
         
         $product->save();
         return redirect()->back()->with('invalid',' Product Information Updated');
+    }
+
+    public function export()
+    {
+        return Excel::download(new ProductsExport, 'products.xlsx');
     }
 
 }
